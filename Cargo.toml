@@ -2,5 +2,13 @@
 name = "tcp-echo"
 version = "0.1.0"
 authors = ["David Beck <david.beck.priv@gmail.com>"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/dbeck/tcp-echo-rs"
+description = "This is a test project to see the feasibility of the acto-rs (Actor library) interfaces and performance"
+keywords = ["actor", "concurrency", "test", "benchmark"]
+readme = "README.md"
+homepage = "https://github.com/dbeck/tcp-echo-rs"
+#documentation = "..."
 
 [dependencies]
+acto-rs = "0.3.7"
