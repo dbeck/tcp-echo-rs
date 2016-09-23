@@ -1,6 +1,6 @@
 [root]
 name = "tcp-echo"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "acto-rs 0.3.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "mio 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
