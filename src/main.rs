@@ -20,8 +20,8 @@ fn main() {
   let (source_task, mut source_out) =
     source::new( "Read Bytes", 2_000, Box::new(ReadBytes{}));
 
-    let (mut filter_task, mut filter_out) =
-      filter::new( "Parser", 2_000, Box::new(Parser{}));
+  let (mut filter_task, mut filter_out) =
+    filter::new( "Parser", 2_000, Box::new(Parser{}));
 
   let mut sink_task =
     sink::new( "Handle Parsed", Box::new(HandleParsed{}));
@@ -29,8 +29,8 @@ fn main() {
   filter_task.connect(&mut source_out).unwrap();
   sink_task.connect(&mut filter_out).unwrap();
 
-  let _source_id = sched.add_task(source_task).unwrap();
-  let _sink_id = sched.add_task(sink_task);
+  let _source_id = sched.add_task(source_task, actors::SchedulingRule::OnExternalEvent);
+  let _sink_id = sched.add_task(sink_task, actors::SchedulingRule::OnMessage);
 
   sched.start();
   sched.stop();

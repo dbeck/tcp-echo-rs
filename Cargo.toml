@@ -1,6 +1,6 @@
 [package]
 name = "tcp-echo"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["David Beck <david.beck.priv@gmail.com>"]
 license = "MIT/Apache-2.0"
 repository = "https://github.com/dbeck/tcp-echo-rs"
@@ -11,5 +11,5 @@ homepage = "https://github.com/dbeck/tcp-echo-rs"
 #documentation = "..."
 
 [dependencies]
-acto-rs = "0.3.7"
+acto-rs = "0.4.0"
 mio = "0.6"
